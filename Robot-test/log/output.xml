@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20221103 16:50:22.938" rpa="false" schemaversion="3">
+<suite id="s1" name="Demoblaze tests" source="D:\BadinSoft\Robot-test\Robot-ui-test-main\Demoblaze_tests\Demoblaze_tests.robot">
+<test id="s1-t1" name="Phone product add to cart" line="30">
+<kw name="Browser startup" library="Test_Setup" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Website}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221103 16:50:23.440" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/#'.</msg>
+<status status="PASS" starttime="20221103 16:50:23.440" endtime="20221103 16:50:26.169"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221103 16:50:26.170" endtime="20221103 16:50:26.309"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${Delay}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221103 16:50:26.309" endtime="20221103 16:50:26.310"/>
+</kw>
+<status status="PASS" starttime="20221103 16:50:23.440" endtime="20221103 16:50:26.311"/>
+</kw>
+<kw name="Set Tags" library="BuiltIn">
+<arg>Regression</arg>
+<doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
+<msg timestamp="20221103 16:50:26.312" level="INFO">Set tag 'Regression'.</msg>
+<status status="PASS" starttime="20221103 16:50:26.311" endtime="20221103 16:50:26.313"/>
+</kw>
+<kw name="Given User is on" library="Demoblaze_steps">
+<arg>"Homepage"</arg>
+<kw name="Run Keyword And Return If" library="BuiltIn">
+<arg>${page}=="Homepage"</arg>
+<arg>Title Should Be</arg>
+<arg>STORE</arg>
+<doc>Runs the specified keyword and returns from the enclosing user keyword.</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>STORE</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221103 16:50:27.331" level="INFO">Page title is 'STORE'.</msg>
+<status status="PASS" starttime="20221103 16:50:26.316" endtime="20221103 16:50:27.331"/>
+</kw>
+<msg timestamp="20221103 16:50:27.332" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20221103 16:50:26.315" endtime="20221103 16:50:27.333"/>
+</kw>
+<kw name="Run Keyword And Return If" library="BuiltIn">
+<arg>${page}=="Homepage"</arg>
+<arg>User is on Homepage</arg>
+<doc>Runs the specified keyword and returns from the enclosing user keyword.</doc>
+<status status="NOT RUN" starttime="20221103 16:50:27.334" endtime="20221103 16:50:27.334"/>
+</kw>
+<status status="PASS" starttime="20221103 16:50:26.313" endtime="20221103 16:50:27.334"/>
+</kw>
+<kw name="When Select Phones" library="Demoblaze_steps">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${CategoriesPhones}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221103 16:50:29.411" level="INFO">Element 'xpath://div/a[@id='itemc'][1]' is displayed.</msg>
+<status status="PASS" starttime="20221103 16:50:27.334" endtime="20221103 16:50:29.411"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CategoriesPhones}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221103 16:50:29.413" level="INFO">Clicking element 'xpath://div/a[@id='itemc'][1]'.</msg>
+<status status="PASS" starttime="20221103 16:50:29.412" endtime="20221103 16:50:31.495"/>
+</kw>
+<status status="PASS" starttime="20221103 16:50:27.334" endtime="20221103 16:50:31.495"/>
+</kw>
+<kw name="And Select first Phone item" library="Demoblaze_steps">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${FirstPhoneItem}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221103 16:50:33.556" level="INFO">Element 'xpath://div[5]/div/div[2]/div/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20221103 16:50:31.496" endtime="20221103 16:50:33.556"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FirstPhoneItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221103 16:50:33.556" level="INFO">Clicking element 'xpath://div[5]/div/div[2]/div/div[1]'.</msg>
+<status status="PASS" starttime="20221103 16:50:33.556" endtime="20221103 16:50:36.067"/>
+</kw>
+<status status="PASS" starttime="20221103 16:50:31.496" endtime="20221103 16:50:36.067"/>
+</kw>
+<kw name="And Add item to cart" library="Demoblaze_steps">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${AddToCartButton}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221103 16:50:38.137" level="INFO">Element 'xpath://a[@class='btn btn-success btn-lg']' is displayed.</msg>
+<status status="PASS" starttime="20221103 16:50:36.068" endtime="20221103 16:50:38.137"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddToCartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221103 16:50:38.137" level="INFO">Clicking element 'xpath://a[@class='btn btn-success btn-lg']'.</msg>
+<status status="PASS" starttime="20221103 16:50:38.137" endtime="20221103 16:50:40.281"/>
+</kw>
+<kw name="Go Back" library="Test_Setup">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>history.back()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20221103 16:50:40.283" level="INFO">Executing JavaScript:
+history.back()
+Without any arguments.</msg>
+<msg timestamp="20221103 16:50:41.659" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221103 16:50:41.662" level="FAIL">UnexpectedAlertPresentException: Alert Text: Product added
+Message: unexpected alert open: {Alert text : Product added}
+  (Session info: chrome=106.0.5249.119)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00EFDF13+2219795]
+	Ordinal0 [0x00E92841+1779777]
+	Ordinal0 [0x00DA423D+803389]
+	Ordinal0 [0x00DFEFFE+1175550]
+	Ordinal0 [0x00DEE616+1107478]
+	Ordinal0 [0x00DC7F89+950153]
+	Ordinal0 [0x00DC8F56+954198]
+	GetHandleVerifier [0x011F2CB2+3040210]
+	GetHandleVerifier [0x011E2BB4+2974420]
+	GetHandleVerifier [0x00F96A0A+565546]
+	GetHandleVerifier [0x00F95680+560544]
+	Ordinal0 [0x00E99A5C+1808988]
+	Ordinal0 [0x00E9E3A8+1827752]
+	Ordinal0 [0x00E9E495+1827989]
+	Ordinal0 [0x00EA80A4+1867940]
+	BaseThreadInitThunk [0x7752FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77857BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77857B8E+238]
+</msg>
+<status status="FAIL" starttime="20221103 16:50:40.282" endtime="20221103 16:50:41.683"/>
+</kw>
+<status status="FAIL" starttime="20221103 16:50:40.282" endtime="20221103 16:50:41.686"/>
+</kw>
+<status status="FAIL" starttime="20221103 16:50:36.068" endtime="20221103 16:50:41.687"/>
+</kw>
+<kw name="Then Table in cart is present" library="Demoblaze_steps">
+<status status="NOT RUN" starttime="20221103 16:50:41.687" endtime="20221103 16:50:41.687"/>
+</kw>
+<kw name="Close Browser Window" library="Test_Setup" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221103 16:50:41.687" endtime="20221103 16:50:45.013"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Test Completed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221103 16:50:45.013" endtime="20221103 16:50:45.013"/>
+</kw>
+<status status="PASS" starttime="20221103 16:50:41.687" endtime="20221103 16:50:45.015"/>
+</kw>
+<tag>Regression</tag>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20221103 16:50:23.439" endtime="20221103 16:50:45.015">UnexpectedAlertPresentException: Alert Text: Product added
+Message: unexpected alert open: {Alert text : Product added}
+  (Session info: chrome=106.0.5249.119)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00EFDF13+2219795]
+	Ordinal0 [0x00E92841+1779777]
+	Ordinal0 [0x00DA423D+803389]
+	Ordinal0 [0x00DFEFFE+1175550]
+	Ordinal0 [0x00DEE616+1107478]
+	Ordinal0 [0x00DC7F89+950153]
+	Ordinal0 [0x00DC8F56+954198]
+	GetHandleVerifier [0x011F2CB2+3040210]
+	GetHandleVerifier [0x011E2BB4+2974420]
+	GetHandleVerifier [0x00F96A0A+565546]
+	GetHandleVerifier [0x00F95680+560544]
+	Ordinal0 [0x00E99A5C+1808988]
+	Ordinal0 [0x00E9E3A8+1827752]
+	Ordinal0 [0x00E9E495+1827989]
+	Ordinal0 [0x00EA80A4+1867940]
+	BaseThreadInitThunk [0x7752FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77857BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77857B8E+238]
+</status>
+</test>
+<doc>This file is filled with tests, and is linked to the steps file via Gherkin methodology.
+Cannot mix BDD and DDT(data-driven-test), that's why there is no scenario outline.
+Test setup is used for prerequired steps and starting the browser.
+Test Teardown closes the browser and takes a screenshot if the test fails.</doc>
+<status status="FAIL" starttime="20221103 16:50:22.945" endtime="20221103 16:50:45.016"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Regression</stat>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demoblaze tests">Demoblaze tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
